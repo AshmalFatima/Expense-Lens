@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #f8f9fa;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h4 {
+  font-weight: bold;
+}
+
+.sidebar .profile {
+  margin-top: auto;
+  text-align: center;
+}
+
+.profile-management {
+  flex: 1;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.save-changes-btn {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
