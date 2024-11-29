@@ -1,0 +1,566 @@
+/* App.css */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px; /* Fixed width for sidebar */
+  height: 100vh; /* Full height of the viewport */
+  background-color: white; /* Sidebar background white */
+  color: black; /* Text color black */
+  padding: 20px;
+  position: fixed; /* Sidebar fixed to the left */
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 10;
+}
+
+.sidebar .title {
+  font-size: 24px; /* Title font size */
+  font-weight: bold; /* Bold title */
+  color: #007bff; /* Blue color for the title */
+  margin-bottom: 30px; /* Space below title */
+  text-align: left; /* Align title to the left */
+  width: 100%; /* Ensure title takes full width */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: black; /* Link color black */
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center; /* Align icon and text */
+  padding: 8px 0;
+}
+
+.sidebar ul li a:hover {
+  background-color: #f0f0f0; /* Light gray on hover */
+  padding-left: 10px;
+  transition: 0.3s;
+}
+
+.sidebar ul li a svg {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.content {
+  margin-left: 250px; /* Space for the sidebar */
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  height: 100vh; /* Ensure content area takes full viewport height */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Responsive design */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 200px; /* Reduce sidebar width on smaller screens */
+    position: static; /* Sidebar moves with content */
+    height: auto; /* Allow sidebar to grow with content */
+  }
+
+  .content {
+    margin-left: 0; /* Remove margin on smaller screens */
+  }
+}
+/* App.css */
+
+/* App.css */
+
+/* General Layout */
+.friends-container {
+  display: flex;
+  justify-content: flex-start; /* Align to the left */
+  gap: 30px; /* Increased space between each card */
+  flex-wrap: nowrap; /* Ensure cards stay in a single row */
+  margin-top: 20px;
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  padding: 10px 0;
+}
+
+.friend-card {
+  width: 200px;
+  text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+
+.friend-card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deepen the shadow on hover */
+}
+
+.friend-img {
+  width: 100px; /* Set width for the round image */
+  height: 100px; /* Set height for the round image */
+  border-radius: 50%; /* Make the image round */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  border: 2px solid #f0f0f0; /* Light border around the image */
+  margin-bottom: 15px; /* Space below the image */
+}
+
+.friend-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.friends input {
+  width: 250px;
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.friends input:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none;
+}
+
+.friends button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.friends button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+/* App.css */
+
+/* Groups Container */
+.groups-container {
+  display: flex;
+  justify-content: flex-start; /* Align to the left */
+  gap: 30px; /* Space between each card */
+  flex-wrap: nowrap; /* Ensure cards stay in a single row */
+  margin-top: 20px;
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  padding: 10px 0;
+}
+
+.group-card {
+  width: 200px;
+  text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+
+.group-card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deepen the shadow on hover */
+}
+
+.group-img {
+  width: 100px; /* Set width for the round image */
+  height: 100px; /* Set height for the round image */
+  border-radius: 50%; /* Make the image round */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  border: 2px solid #f0f0f0; /* Light border around the image */
+  margin-bottom: 15px; /* Space below the image */
+}
+
+.group-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+/* Input and button styling */
+.groups input {
+  width: 250px;
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.groups input:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none;
+}
+
+.groups button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.groups button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+/* Contact Us page styles */
+.contact-us-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.contact-info-card,
+.contact-form-card {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px;
+  width: 40%;
+  min-width: 300px;
+}
+
+.contact-info-card h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.contact-info-card p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.contact-info-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info-list li {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.contact-info-list li strong {
+  color: #333;
+}
+
+.contact-form-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+  background-color: #fff;
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .contact-us-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info-card,
+  .contact-form-card {
+    width: 90%;
+  }
+}
+/* Feedback Page Styles */
+.feedback-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.feedback-form-card {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 50%;
+  min-width: 300px;
+}
+
+.feedback-form-card h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.feedback-form-card p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+}
+
+.form-group textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+  background-color: #fff;
+}
+
+/* Rating Stars */
+.rating {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating span {
+  font-size: 2rem;
+  color: #ddd;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.rating .filled {
+  color: #f39c12; /* Gold color for filled stars */
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .feedback-form-card {
+    width: 90%;
+  }
+}
+/* Settings Page Styles */
+.settings-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.settings-form-card {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 50%;
+  min-width: 300px;
+}
+
+.settings-form-card h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.settings-form-card p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+}
+
+.form-group input:focus {
+  border-color: #4CAF50;
+  outline: none;
+  background-color: #fff;
+}
+
+/* Profile Image Preview */
+.profile-image-preview {
+  margin-top: 15px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .settings-form-card {
+    width: 90%;
+  }
+}
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
